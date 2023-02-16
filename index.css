@@ -1,5 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Comfortaa:wght@300&family=Inter:wght@400;700;800&family=Outfit:wght@400;700&family=Poppins:wght@400;500;600&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+background-color: hsl(36, 100%, 99%);
+font-family: 'Inter', sans-serif;
+font-size: 15px;
+min-height: 100vh;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin: 4em;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 3rem;
+    
+}
+
+.menu a{
+    cursor: pointer;
+    gap: 5rem;
+}
+
+.container{
+    background-color: red;
+    width: 90%;
+    max-width: 1440px;
+    margin: 4em;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+
+.container .primary{
+    grid-column: span 2;
+    height: 80%;
+}
+
+.container .sidebar{
+    grid-column: span 1;
+    height: 80%;
+}
+
+.container .articles{
+    grid-column: span 3;
+    display: flex;
 }
