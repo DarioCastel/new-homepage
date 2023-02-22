@@ -100,7 +100,7 @@ min-height: 100vh;
     display: flex;
 }
 
-.menu-flex{
+.cont-btn{
     display: none;
 }
 .sidebar{
@@ -207,20 +207,25 @@ min-height: 100vh;
         align-items: center;
         justify-content: center;
     }
-    }
-    .cont-btn i{
+    .cont-btn .menu-btn{
         font-size: 50px;
         cursor: pointer;
+    }
+
+    .cont-btn .x-btn{
+        display: none;
     }
 
     .menu{
         display: none;
     }
+
     .primary{
         display: flex;
         flex-direction: column;
         width: 100%;
     }
+
     .primary h1{
         grid-column: span 2;
     }
@@ -228,6 +233,7 @@ min-height: 100vh;
     .primary .description{
         grid-column: span 2;
     }
+
     .arti .img-arti{
         min-height: 150px;
         min-width: 150px;
@@ -236,6 +242,7 @@ min-height: 100vh;
     .arti .descnew{
         gap: 20px;
     }
+
     .arti .img-arti img{
         min-width: 100%;
         min-height: 90%;

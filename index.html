@@ -33,7 +33,8 @@
           <img src="./assets/images/logo.svg" alt="logo--empresa" />
         </div>
         <div class="cont-btn">
-          <i class="fa-solid fa-bars"></i>
+          <i class="menu-btn fa-solid fa-bars"></i>
+          <i class="x-btn fa-solid fa-x"></i>
         </div>
         <div class="menu">
           <a>Home</a>
@@ -131,4 +132,10 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
   </body>
+  <script>
+    let btnMenu = document.querySelector('.cont-btn');
+    btnMenu.onclick = function(){
+      btnMenu.classList.toggle('active')
+    }
+  </script>
 </html>
