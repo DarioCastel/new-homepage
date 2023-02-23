@@ -32,10 +32,20 @@
         <div class="icono">
           <img src="./assets/images/logo.svg" alt="logo--empresa" />
         </div>
-        <div class="cont-btn">
-          <i class="menu-btn fa-solid fa-bars"></i>
-          <i class="x-btn fa-solid fa-x"></i>
+        <div class="menu-desplegable">
+          <div class="cont-btn">
+            <i class="menu-btn fa-solid fa-bars"></i>
+            <i class="x-btn fa-solid fa-x"></i>
+          </div>
+          <li class="lista-plegable">
+            <ul><a href=""></a>Home</ul>
+            <ul><a href=""></a>New</ul>
+            <ul><a href=""></a>Popular</ul>
+            <ul><a href=""></a>Trending</ul>
+            <ul><a href=""></a>Categories</ul>
+          </li>
         </div>
+        
         <div class="menu">
           <a>Home</a>
           <a>New</a>
@@ -134,8 +144,9 @@
   </body>
   <script>
     let btnMenu = document.querySelector('.cont-btn');
+    let menuDesplegable = document.querySelector ('.menu-desplegable');
     btnMenu.onclick = function(){
-      btnMenu.classList.toggle('active')
+      menuDesplegable.classList.toggle('active')
     }
   </script>
 </html>

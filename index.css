@@ -194,6 +194,15 @@ min-height: 100vh;
     color: hsl(236, 13%, 42%);
 }
 
+.menu-desplegable{
+    top: 3.5rem;
+    right: 2rem;
+    position: fixed;
+    transition: height 0.5s, width 0.5s;
+}
+.lista-plegable{
+    display: none;
+}
 @media screen and (max-width: 600px) {
     .container{
         display: flex;
@@ -246,5 +255,34 @@ min-height: 100vh;
     .arti .img-arti img{
         min-width: 100%;
         min-height: 90%;
+    }
+    .menu-desplegable{
+        background-color: red;
+    }
+
+    .menu-desplegable.active{
+        width: 320px;
+        height: 100vh;
+        transition: width .5s, height.5s;
+    }
+
+    .menu-desplegable.active .menu-btn{
+        display: none;
+    }
+
+    .menu-desplegable.active .x-btn{
+        display: flex;
+        font-size: 50px;
+        position: fixed;
+        top: 3.5rem;
+        right: 2.1rem;
+    }
+
+    .menu-desplegable.active .lista-plegable{
+        display: flex;
+        flex-direction: column;
+        padding-left: 2rem;
+        gap: 2rem;
+        cursor: pointer;
     }
 }
