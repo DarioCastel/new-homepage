@@ -143,10 +143,12 @@
     </div>
   </body>
   <script>
+    let containerClicked = document.querySelector('.container');;
     let btnMenu = document.querySelector('.cont-btn');
     let menuDesplegable = document.querySelector ('.menu-desplegable');
     btnMenu.onclick = function(){
-      menuDesplegable.classList.toggle('active')
+      menuDesplegable.classList.toggle('active'),
+      containerClicked.classList.toggle('active')
     }
   </script>
 </html>

@@ -43,7 +43,6 @@ min-height: 100vh;
     display: grid;
     gap: 1.6rem;
     grid-template-columns: repeat(3,1fr);
-    
 }
 
 .container .primary{
@@ -194,14 +193,19 @@ min-height: 100vh;
     color: hsl(236, 13%, 42%);
 }
 
+
+
 .menu-desplegable{
+    position: absolute;
     top: 3.5rem;
     right: 2rem;
-    position: fixed;
     transition: height 0.5s, width 0.5s;
 }
 .lista-plegable{
     display: none;
+}
+body.active{
+    backdrop-filter: blur(10px);
 }
 @media screen and (max-width: 600px) {
     .container{
@@ -256,14 +260,16 @@ min-height: 100vh;
         min-width: 100%;
         min-height: 90%;
     }
-    .menu-desplegable{
-        background-color: red;
-    }
+    
 
     .menu-desplegable.active{
-        width: 320px;
-        height: 100vh;
+        min-width: 70%;
+        min-height: 100vh;
         transition: width .5s, height.5s;
+        top: 0;
+        z-index: 0;
+        background-color: hsl(36, 100%, 99%);
+        
     }
 
     .menu-desplegable.active .menu-btn{
@@ -271,11 +277,11 @@ min-height: 100vh;
     }
 
     .menu-desplegable.active .x-btn{
+        position: relative;
         display: flex;
         font-size: 50px;
-        position: fixed;
-        top: 3.5rem;
-        right: 2.1rem;
+        left: 13rem;
+        top: 3.9rem;
     }
 
     .menu-desplegable.active .lista-plegable{
@@ -284,5 +290,7 @@ min-height: 100vh;
         padding-left: 2rem;
         gap: 2rem;
         cursor: pointer;
+        margin-top: 10rem;
+        font-weight: 700;
     }
 }
